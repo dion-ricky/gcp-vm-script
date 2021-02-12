@@ -1,6 +1,5 @@
 #! /bin/bash
 set -x
-set -eu
 
 # Execute pre-install script
 eval $1
