@@ -7,8 +7,8 @@ eval $1
 
 # Update apt package index
 # and install necessary packages
-sudo apt-get update
-sudo apt-get install \
+sudo apt-get -yq update
+sudo apt-get -yq install \
   apt-transport-https \
   ca-certificates \
   curl \
@@ -25,8 +25,8 @@ sudo add-apt-repository \
   stable"
 
 # Install Docker engine
-sudo apt-get update
-sudo apt-get install docker-ce docker-ce-cli containerd.io
+sudo apt-get -yq update
+sudo apt-get -yq install docker-ce docker-ce-cli containerd.io
 
 # Install code-server
 # https://github.com/cdr/code-server
