@@ -30,7 +30,7 @@ sudo apt-get -yq install docker-ce docker-ce-cli containerd.io
 # Install code-server
 # https://github.com/cdr/code-server
 mkdir -p ~/.config
-sudo docker run --name code-server -p 0.0.0.0:8080:8080 \
+sudo docker run -it -d --name code-server -p 0.0.0.0:8080:8080 \
   -v "$HOME/.config:/home/coder/.config" \
   -v "$PWD:/home/coder/project" \
   -u "$(id -u):$(id -g)" \
